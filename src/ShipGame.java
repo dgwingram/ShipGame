@@ -2,7 +2,7 @@ public class ShipGame {
 
 
     public ShipGame(){
-        new GameController();
+        new GameLauncher();
     }
 
     public static void main(String[] args) {

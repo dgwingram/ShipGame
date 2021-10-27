@@ -10,9 +10,12 @@ import java.awt.GraphicsEnvironment;
 public class GameWindow extends JFrame {
 
 
+    GamePanel screen;
     GraphicsDevice device;
     Dimension currentDimensions, fullscreenDimensions, defaultScreenSize;
 
+
+    //Constructor
     public GameWindow(){
         defaultScreenSize = new Dimension(800,600);
         fullscreenDimensions = Toolkit.getDefaultToolkit().getScreenSize();
@@ -20,9 +23,11 @@ public class GameWindow extends JFrame {
 
     }
 
+    //Initializing Window
     private void init(int width, int height){
         GraphicsEnvironment graphics = GraphicsEnvironment.getLocalGraphicsEnvironment();
         this.device = graphics.getDefaultScreenDevice();
+
 
         //Set window Information
         setTitle("Ship Game");
@@ -34,6 +39,7 @@ public class GameWindow extends JFrame {
         setVisible(true);
     }
 
+    //Set Screen to Fullscreen
     public void setFullscreen(){
 
         this.device.setFullScreenWindow(this);
